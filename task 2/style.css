@@ -1,0 +1,174 @@
+:root {
+    --bg-dark: #0c0c0c;
+    --accent: #f8f3f3; /* Changed from original #ff00ff based on common blue accent */
+    --text-light: #f3ecec;
+    --text-muted: #f5f109;
+    --card-bg: #4444a3;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 60px;
+    gap: 40px;
+    background: transparent;
+    font-weight: 500;
+}
+
+nav a {
+    color: var(--text-muted);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.hero {
+  background: url(' https://www.hdwallpapers.in/download/cool_blue_ocean_mountain_tree_branches_nature_background_hd_dark_blue-1920x1080.jpg') center/cover no-repeat;
+  color: rgb(247, 242, 242);
+  text-align: center ;
+  padding: 120px 20px 80px;
+  position: relative;
+}
+
+.profile-pic {
+  position: absolute    ;
+  top: 10px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    color: var(--accent);
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: var(--text-muted);
+}
+
+.hero img {
+    width: 220px;
+    border-radius: 50%;
+    border: 10px solid var(--accent);
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: rgb(46, 14, 14);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 60px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px; /* Changed from 120px based on visual context, 120px would be very rounded */
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    background: #a4a4df; /* A slightly lighter shade for hover effect */
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.stats h2 {
+    font-size: 2.5em;
+    color: var(--accent);
+}
+
+.stats p {
+    color: var(--text-muted);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.projects img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #7676ad; /* A darker shade for the footer background */
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
